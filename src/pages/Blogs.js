@@ -2,23 +2,23 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { MdSearch } from 'react-icons/md';
 import SectionTitle from '../components/SectionTitle';
-import ProjectsInfo from '../assets/data/projects';
-import ProjectItem from '../components/ProjectItem';
+import blogsInfo from '../assets/data/blogs';
+import BlogItem from '../components/blogItem';
 
-const ProjectStyle = styled.div`
+const BlogStyle = styled.div`
   padding: 10rem 0;
-  .projects__allItems {
+  .blogs__allItems {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 5rem;
     margin-top: 5rem;
   }
-  .projects__searchBar {
+  .blogs__searchBar {
     position: relative;
     width: 300px;
     margin-top: 5rem;
   }
-  .projects__searchBar input {
+  .blogs__searchBar input {
     width: 100%;
     font-size: 2rem;
     padding: 0.8rem;
@@ -27,19 +27,19 @@ const ProjectStyle = styled.div`
     outline: none;
     border: none;
   }
-  .projects__searchBar .searchIcon {
+  .blogs__searchBar .searchIcon {
     position: absolute;
     width: 2rem;
 
     right: 1rem;
   }
-  .projects__searchBar .searchIcon path {
+  .blogs__searchBar .searchIcon path {
     color: var(--deep-dark);
   }
   @media only screen and (max-width: 768px) {
-    .projects__searchBar,
-    .projects__searchBar form,
-    .projects__searchBar input {
+    .blogs__searchBar,
+    .blogs__searchBar form,
+    .blogs__searchBar input {
       width: 100%;
     }
   }
@@ -47,11 +47,11 @@ const ProjectStyle = styled.div`
 
 export default function Blogs() {
   const [searchText, setSearchText] = useState('');
-  const [projectsData, setProjectsData] = useState(ProjectsInfo);
+  const [blogsData, setBlogsData] = useState(blogsInfo);
   useEffect(() => {
     if (searchText === '') return;
-    setProjectsData(() =>
-      ProjectsInfo.filter((item) =>
+    setBlogsData(() =>
+      blogsInfo.filter((item) =>
         item.name.toLowerCase().match(searchText.toLowerCase())
       )
     );
@@ -60,31 +60,31 @@ export default function Blogs() {
     e.preventDefault();
     setSearchText(e.target.value);
     if (!e.target.value.length > 0) {
-      setProjectsData(ProjectsInfo);
+      setBlogsData(blogsInfo);
     }
   };
   return (
     <>
-      <ProjectStyle>
+      <BlogStyle>
         <div className="container">
           <SectionTitle
-            heading="Projects"
-            subheading="some of my recent works"
+            heading="Blogs"
+            subheading="some of my featured posts"
           />
-          <div className="projects__searchBar">
+          <div className="blogs__searchBar">
             <form>
               <input
                 type="text"
                 value={searchText}
                 onChange={handleChange}
-                placeholder="Project Name"
+                placeholder="Blogs Name"
               />
               <MdSearch className="searchIcon" />
             </form>
           </div>
-          <div className="projects__allItems">
-            {projectsData.map((item) => (
-              <ProjectItem
+          <div className="blogs__allItems">
+            {blogsData.map((item) => (
+              <BlogItem
                 key={item.id}
                 title={item.name}
                 desc={item.desc}
@@ -93,7 +93,7 @@ export default function Blogs() {
             ))}
           </div>
         </div>
-      </ProjectStyle>
+      </BlogStyle>
     </>
   );
 }
