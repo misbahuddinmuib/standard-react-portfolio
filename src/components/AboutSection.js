@@ -31,6 +31,11 @@ const AboutSectionStyles = styled.div`
     gap: 2rem;
     margin-top: 2rem;
   }
+
+  .aboutSection__left,
+  .about-text {
+    text-align: justify;
+  }
   @media only screen and (max-width: 950px) {
     .aboutSection__left {
       flex: 4;
@@ -79,7 +84,7 @@ export default function AboutSection() {
             subheading="Let me introduce myself"
             heading="About Me"
           />
-          <PText>
+          <PText className="about-text">
             I am a software developer from Dhaka, Bangladesh.I create
             professional websites. I love art and always try to show unique
             views to the audience through my design.

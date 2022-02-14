@@ -22,6 +22,10 @@ const FooterStyle = styled.div`
     font-size: 3.5rem;
     margin-bottom: 1rem;
   }
+  .footer__col1,
+  .footer-text {
+    text-align: justify;
+  }
   .copyright {
     background-color: var(--dark-bg);
     text-align: left;
@@ -58,7 +62,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer__col1">
           <h1 className="footer__col1__title">Misbah Uddin Muib</h1>
-          <PText>
+          <PText className="footer-text">
             A Software developer from Dhaka, Bangladesh.I always make websites
             that have unique designs and also has a good performance rate.
           </PText>
@@ -145,9 +149,9 @@ export default function Footer() {
       <div className="copyright">
         <div className="container">
           <PText>
-            © 2022 - Misbah Uddin Muib | Designed By{' '}
+            © 2022 - MisbahMuib | Designed By{' '}
             <a target="_blank" rel="noreferrer" href="http://intigsol.com">
-              intigsol
+              Intigsol
             </a>{' '}
           </PText>
         </div>

@@ -12,6 +12,7 @@ const ProjectStyle = styled.div`
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 5rem;
     margin-top: 5rem;
+    text-align: justify;
   }
   .projects__searchBar {
     position: relative;
@@ -36,6 +37,7 @@ const ProjectStyle = styled.div`
   .projects__searchBar .searchIcon path {
     color: var(--deep-dark);
   }
+
   @media only screen and (max-width: 768px) {
     .projects__searchBar,
     .projects__searchBar form,

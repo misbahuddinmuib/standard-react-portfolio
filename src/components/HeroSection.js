@@ -41,6 +41,7 @@ const HeroStyles = styled.div`
   .hero__info {
     margin-top: -18rem;
   }
+
   .hero__social,
   .hero__scrollDown {
     display: flex;
@@ -112,6 +113,10 @@ const HeroStyles = styled.div`
     .hero__info {
       margin-top: 3rem;
     }
+    .hero-info,
+    .hero-text {
+      text-align: justify;
+    }
     .hero__social {
       left: 0px;
       bottom: -15%;
@@ -160,7 +165,7 @@ export default function HeroSection() {
             <img src={HeroImg} alt="" />
           </div>
           <div className="hero__info">
-            <PText>
+            <PText className="hero-text">
               I am working as a Software Developer.I love to design and make new
               web experiences for the people.
             </PText>
@@ -202,18 +207,26 @@ export default function HeroSection() {
                 </li>
                 <li>
                   <a
-                    href="https://muib.netlify.app/"
+                    href="https://github.com/MisbahMuib"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    LI
+                    GI
                   </a>
                 </li>
               </ul>
             </div>
           </div>
           <div className="hero__scrollDown">
-            <p>Scroll</p>
+            <li>
+              <a
+                href="https://muib.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LIVE
+              </a>
+            </li>
             <img src={ScrollDownArrow} alt="ScrollDown Arrow" />
           </div>
         </div>

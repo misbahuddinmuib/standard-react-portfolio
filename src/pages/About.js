@@ -36,6 +36,7 @@ const AboutPageStyles = styled.div`
   }
   .about__info {
     margin-bottom: 4rem;
+    text-align: justify;
     .para {
       max-width: 100%;
     }
@@ -77,7 +78,7 @@ export default function About() {
   return (
     <>
       <AboutPageStyles>
-        <div className="container">
+        <div data-aos="fade-left" className="container">
           <div className="top-section">
             <div className="left">
               <p className="about__subheading">
@@ -102,7 +103,7 @@ export default function About() {
                   place.
                 </PText>
               </div>
-              <Button btnText="Download CV" btnLink="#" />
+              <Button btnText="Download Resume" btnLink="" />
             </div>
             <div className="right">
               <img src={AboutImg} alt="me" />

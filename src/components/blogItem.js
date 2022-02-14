@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import blogImg from '../assets/images/projectImg.png';
+import blogImg from '../assets/images/blogs/blog-1.png';
 
 const BlogItemStyle = styled.div`
   .blogItem__img {
