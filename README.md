@@ -1,5 +1,7 @@
 # Standard React Portfolio
 
+[Live Site](https://standard-react-portfolio.netlify.app/)
+
 
 # STANDARD-WEBSITE FEATURES
 
