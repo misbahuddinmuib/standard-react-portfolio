@@ -7,13 +7,21 @@
 Hover and Effects will be Include
 
 First Page
+
 Navigation Bar (with Blog Button)
+
 Introduction
+
 Professional Summary
+
 Skills
+
 Experience
+
 Projects
+
 Contact
+
 Footer
 
 Second Page
