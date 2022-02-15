@@ -2,6 +2,7 @@
 
 [Live Site](https://standard-react-portfolio.netlify.app/)
 
+![screencapture-epic-wing-188bb3-netlify-app-2022-02-15-17_13_41](https://user-images.githubusercontent.com/45326654/154051085-5ce03b8f-d07e-4469-9776-c74836fd2153.png)
 
 # STANDARD-WEBSITE FEATURES
 
